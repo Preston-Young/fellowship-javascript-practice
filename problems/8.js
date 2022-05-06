@@ -7,7 +7,8 @@
  * @example [1, 2, 3] -> 6
 */
 function problem(numbers) {
-    return null;
+    const sum = numbers.reduce((acc, number) => acc + number, 0);
+    return sum / numbers.length;
 }
 
 const tests = [
