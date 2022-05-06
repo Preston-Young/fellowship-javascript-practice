@@ -7,7 +7,18 @@
  * @example [3,2,3] -> 3
 */
 function problem(numbers) {
-    return null;
+    const freq = {};
+    for (const number of numbers) {
+        if (!(number in freq)) {
+            freq[number] = 0;
+        }
+
+        freq[number] += 1;
+
+        if (freq[number] >= (numbers.length / 2)) {
+            return number;
+        }
+    }
 }
 
 const tests = [

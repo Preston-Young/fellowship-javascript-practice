@@ -8,7 +8,19 @@
  * @example "racecar" -> true
 */
 function problem(str) {
-    return null;
+    let forwardStr = "";
+    for (const char of str) {
+        if (char != ' ') {
+            forwardStr += char.toLowerCase();
+        }
+    }
+
+    let reverseStr = "";
+    for (let i = str.length - 1; i >= 0; i--) {
+        reverseStr += forwardStr.charAt(i);
+    }
+
+    return forwardStr === reverseStr;
 }
 
 const tests = [
